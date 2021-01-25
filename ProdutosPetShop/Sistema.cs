@@ -16,10 +16,19 @@ namespace ProdutosPetShop
         {
             InitializeComponent();
         }
+        void listaProdutos()
+        {
+            //chamando o banco no formulário com instância da calsse
+            ConectaBanco con = new ConectaBanco();
+            dgProdutos.DataSource = con.listaProdutos(); //DataGridView
+
+            dgProdutos.Columns["idProduto"].Visible = false;
+        }
 
         private void Sistema_Load(object sender, EventArgs e)
         {
-
+            //quando abrir o formulário, chama a função listaProdutos
+            listaProdutos();
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
