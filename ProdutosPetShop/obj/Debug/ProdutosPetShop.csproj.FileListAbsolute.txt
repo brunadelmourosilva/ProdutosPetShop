@@ -1,0 +1,10 @@
+C:\Users\Bruna\OneDrive - alunos.ifsuldeminas.edu.br\Sistemas de Informação\Semestre 2\Linguagem e Tecnicas I\VisualStudio\ProdutosPetShop\ProdutosPetShop\bin\Debug\ProdutosPetShop.exe.config
+C:\Users\Bruna\OneDrive - alunos.ifsuldeminas.edu.br\Sistemas de Informação\Semestre 2\Linguagem e Tecnicas I\VisualStudio\ProdutosPetShop\ProdutosPetShop\bin\Debug\ProdutosPetShop.exe
+C:\Users\Bruna\OneDrive - alunos.ifsuldeminas.edu.br\Sistemas de Informação\Semestre 2\Linguagem e Tecnicas I\VisualStudio\ProdutosPetShop\ProdutosPetShop\bin\Debug\ProdutosPetShop.pdb
+C:\Users\Bruna\OneDrive - alunos.ifsuldeminas.edu.br\Sistemas de Informação\Semestre 2\Linguagem e Tecnicas I\VisualStudio\ProdutosPetShop\ProdutosPetShop\obj\Debug\ProdutosPetShop.csprojAssemblyReference.cache
+C:\Users\Bruna\OneDrive - alunos.ifsuldeminas.edu.br\Sistemas de Informação\Semestre 2\Linguagem e Tecnicas I\VisualStudio\ProdutosPetShop\ProdutosPetShop\obj\Debug\ProdutosPetShop.Sistema.resources
+C:\Users\Bruna\OneDrive - alunos.ifsuldeminas.edu.br\Sistemas de Informação\Semestre 2\Linguagem e Tecnicas I\VisualStudio\ProdutosPetShop\ProdutosPetShop\obj\Debug\ProdutosPetShop.Properties.Resources.resources
+C:\Users\Bruna\OneDrive - alunos.ifsuldeminas.edu.br\Sistemas de Informação\Semestre 2\Linguagem e Tecnicas I\VisualStudio\ProdutosPetShop\ProdutosPetShop\obj\Debug\ProdutosPetShop.csproj.GenerateResource.cache
+C:\Users\Bruna\OneDrive - alunos.ifsuldeminas.edu.br\Sistemas de Informação\Semestre 2\Linguagem e Tecnicas I\VisualStudio\ProdutosPetShop\ProdutosPetShop\obj\Debug\ProdutosPetShop.csproj.CoreCompileInputs.cache
+C:\Users\Bruna\OneDrive - alunos.ifsuldeminas.edu.br\Sistemas de Informação\Semestre 2\Linguagem e Tecnicas I\VisualStudio\ProdutosPetShop\ProdutosPetShop\obj\Debug\ProdutosPetShop.exe
+C:\Users\Bruna\OneDrive - alunos.ifsuldeminas.edu.br\Sistemas de Informação\Semestre 2\Linguagem e Tecnicas I\VisualStudio\ProdutosPetShop\ProdutosPetShop\obj\Debug\ProdutosPetShop.pdb
