@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sistema));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.marcadorLateral = new System.Windows.Forms.Panel();
             this.btnBusca = new System.Windows.Forms.Button();
             this.btnCadastra = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -87,7 +87,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.marcadorLateral);
             this.panel1.Controls.Add(this.btnBusca);
             this.panel1.Controls.Add(this.btnCadastra);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -97,13 +97,13 @@
             this.panel1.Size = new System.Drawing.Size(183, 568);
             this.panel1.TabIndex = 0;
             // 
-            // panel4
+            // marcadorLateral
             // 
-            this.panel4.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel4.Location = new System.Drawing.Point(1, 80);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 50);
-            this.panel4.TabIndex = 3;
+            this.marcadorLateral.BackColor = System.Drawing.Color.Goldenrod;
+            this.marcadorLateral.Location = new System.Drawing.Point(1, 80);
+            this.marcadorLateral.Name = "marcadorLateral";
+            this.marcadorLateral.Size = new System.Drawing.Size(10, 50);
+            this.marcadorLateral.TabIndex = 3;
             // 
             // btnBusca
             // 
@@ -122,6 +122,7 @@
             this.btnBusca.Text = "      Buscar";
             this.btnBusca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBusca.UseVisualStyleBackColor = true;
+            this.btnBusca.Click += new System.EventHandler(this.btnBusca_Click);
             // 
             // btnCadastra
             // 
@@ -140,6 +141,7 @@
             this.btnCadastra.Text = "      Cadastrar";
             this.btnCadastra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCadastra.UseVisualStyleBackColor = true;
+            this.btnCadastra.Click += new System.EventHandler(this.btnCadastra_Click);
             // 
             // panel2
             // 
@@ -245,11 +247,12 @@
             this.btnConfirmaCadastro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfirmaCadastro.Location = new System.Drawing.Point(258, 324);
             this.btnConfirmaCadastro.Name = "btnConfirmaCadastro";
-            this.btnConfirmaCadastro.Size = new System.Drawing.Size(110, 40);
+            this.btnConfirmaCadastro.Size = new System.Drawing.Size(130, 40);
             this.btnConfirmaCadastro.TabIndex = 12;
             this.btnConfirmaCadastro.Text = " Salvar";
             this.btnConfirmaCadastro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnConfirmaCadastro.UseVisualStyleBackColor = true;
+            this.btnConfirmaCadastro.Click += new System.EventHandler(this.btnConfirmaCadastro_Click);
             // 
             // txtValorUni
             // 
@@ -386,6 +389,7 @@
             this.btnAlterar.TabIndex = 3;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnConfirmaRemocao
             // 
@@ -401,7 +405,7 @@
             this.btnConfirmaRemocao.TabIndex = 2;
             this.btnConfirmaRemocao.Text = "Remover";
             this.btnConfirmaRemocao.UseVisualStyleBackColor = true;
-            this.btnConfirmaRemocao.Click += new System.EventHandler(this.button1_Click);
+            this.btnConfirmaRemocao.Click += new System.EventHandler(this.btnConfirmaRemocao_Click);
             // 
             // txtNomeBusca
             // 
@@ -457,6 +461,7 @@
             this.btnConfirmaAlteracao.Text = "Alterar";
             this.btnConfirmaAlteracao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnConfirmaAlteracao.UseVisualStyleBackColor = true;
+            this.btnConfirmaAlteracao.Click += new System.EventHandler(this.btnConfirmaAlteracao_Click);
             // 
             // txtAlteraValorUni
             // 
@@ -589,7 +594,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel marcadorLateral;
         private System.Windows.Forms.Button btnBusca;
         private System.Windows.Forms.Button btnCadastra;
         private System.Windows.Forms.Button btnFechar;

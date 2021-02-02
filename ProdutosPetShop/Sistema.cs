@@ -45,5 +45,20 @@ namespace ProdutosPetShop
         {
 
         }
+
+        //adicionando transição de um botão para outro através de um panel(marcadorLateral)
+        private void btnCadastra_Click(object sender, EventArgs e)
+        {
+            marcadorLateral.Height = btnCadastra.Height;
+            marcadorLateral.Top = btnCadastra.Top;
+            tabControl1.SelectedTab = tabControl1.TabPages[0];
+        }
+
+        private void btnBusca_Click(object sender, EventArgs e)
+        {
+            marcadorLateral.Height = btnBusca.Height;
+            marcadorLateral.Top = btnBusca.Top;
+            tabControl1.SelectedTab = tabControl1.TabPages[1];
+        }
     }
 }
