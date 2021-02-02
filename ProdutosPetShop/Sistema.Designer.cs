@@ -438,7 +438,7 @@
             this.tabAlterar.Location = new System.Drawing.Point(4, 28);
             this.tabAlterar.Name = "tabAlterar";
             this.tabAlterar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAlterar.Size = new System.Drawing.Size(679, 398);
+            this.tabAlterar.Size = new System.Drawing.Size(670, 398);
             this.tabAlterar.TabIndex = 2;
             this.tabAlterar.Text = "Alterar";
             // 
