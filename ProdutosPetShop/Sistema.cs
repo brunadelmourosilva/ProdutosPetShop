@@ -41,7 +41,7 @@ namespace ProdutosPetShop
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnConfirmaRemocao_Click(object sender, EventArgs e)
         {
 
         }
@@ -59,6 +59,21 @@ namespace ProdutosPetShop
             marcadorLateral.Height = btnBusca.Height;
             marcadorLateral.Top = btnBusca.Top;
             tabControl1.SelectedTab = tabControl1.TabPages[1];
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConfirmaCadastro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConfirmaAlteracao_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
