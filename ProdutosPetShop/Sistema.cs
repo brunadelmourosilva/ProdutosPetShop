@@ -22,6 +22,7 @@ namespace ProdutosPetShop
         {
             this.Close();
         }
+        /*---------------------------------------------------------------*/
 
         //adicionando transição de um botão para outro através de um panel(marcadorLateral)
         private void btnCadastra_Click(object sender, EventArgs e)
@@ -92,7 +93,7 @@ namespace ProdutosPetShop
             ConectaBanco con = new ConectaBanco();
             dgProdutos.DataSource = con.listaProdutos(); //DataGridView
 
-            //dgProdutos.Columns["idProduto"].Visible = false; //está dando erro
+            dgProdutos.Columns["idProduto"].Visible = false;
         }
 
         private void Sistema_Load(object sender, EventArgs e)
