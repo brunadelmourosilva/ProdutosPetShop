@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sistema));
             this.panel1 = new System.Windows.Forms.Panel();
             this.marcadorLateral = new System.Windows.Forms.Panel();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.btnBusca = new System.Windows.Forms.Button();
             this.btnCadastra = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -55,7 +56,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabBuscar = new System.Windows.Forms.TabPage();
             this.dgProdutos = new System.Windows.Forms.DataGridView();
-            this.btnAlterar = new System.Windows.Forms.Button();
             this.btnConfirmaRemocao = new System.Windows.Forms.Button();
             this.txtNomeBusca = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -88,6 +88,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.marcadorLateral);
+            this.panel1.Controls.Add(this.btnAlterar);
             this.panel1.Controls.Add(this.btnBusca);
             this.panel1.Controls.Add(this.btnCadastra);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -104,6 +105,22 @@
             this.marcadorLateral.Name = "marcadorLateral";
             this.marcadorLateral.Size = new System.Drawing.Size(10, 50);
             this.marcadorLateral.TabIndex = 3;
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.FlatAppearance.BorderSize = 0;
+            this.btnAlterar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAlterar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnAlterar.Location = new System.Drawing.Point(22, 219);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(84, 58);
+            this.btnAlterar.TabIndex = 3;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnBusca
             // 
@@ -304,7 +321,6 @@
             this.label7.Size = new System.Drawing.Size(102, 19);
             this.label7.TabIndex = 5;
             this.label7.Text = "Valor unitário:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -355,7 +371,6 @@
             // 
             this.tabBuscar.BackColor = System.Drawing.SystemColors.Control;
             this.tabBuscar.Controls.Add(this.dgProdutos);
-            this.tabBuscar.Controls.Add(this.btnAlterar);
             this.tabBuscar.Controls.Add(this.btnConfirmaRemocao);
             this.tabBuscar.Controls.Add(this.txtNomeBusca);
             this.tabBuscar.Controls.Add(this.label8);
@@ -374,22 +389,7 @@
             this.dgProdutos.Name = "dgProdutos";
             this.dgProdutos.Size = new System.Drawing.Size(563, 344);
             this.dgProdutos.TabIndex = 4;
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.FlatAppearance.BorderSize = 0;
-            this.btnAlterar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAlterar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
-            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterar.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnAlterar.Location = new System.Drawing.Point(580, 143);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(84, 58);
-            this.btnAlterar.TabIndex = 3;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            this.dgProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProdutos_CellContentClick);
             // 
             // btnConfirmaRemocao
             // 

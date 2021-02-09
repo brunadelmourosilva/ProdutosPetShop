@@ -13,7 +13,7 @@ namespace ProdutosPetShop
     {
         MySqlConnection conexao = new MySqlConnection("server=localhost;user id=root;password=vitoria1;database=prod_petshop");
         public string mensagem;
-
+        /*---------------------------------------------------------------*/
         public DataTable listaProdutos()
         {
             MySqlCommand cmd = new MySqlCommand("listaProdutos", conexao);
@@ -30,7 +30,7 @@ namespace ProdutosPetShop
             }
             catch (MySqlException erro)
             {
-                mensagem = "Erro MySQL:" + erro.Message;
+                mensagem = "MySql Error: " + erro.Message;
                 return null;
             }
             finally
@@ -38,7 +38,40 @@ namespace ProdutosPetShop
                 conexao.Close();//fecha banco de dados
             }
         }
-        //-------------------------------------------------------
+        /*---------------------------------------------------------------*/
+        //instância da classe Produto
+        public bool cadastraProdutos(Produto produto)
+        {
+            MySqlCommand cmd = new MySqlCommand("cadastraProdutos", conexao);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            //definindo parâmetros da StoredProcedure com modificadores de acesso da classe Produto
+            cmd.Parameters.AddWithValue("nome", produto.Nome);
+            cmd.Parameters.AddWithValue("descricao", produto.Descricao);
+            cmd.Parameters.AddWithValue("marca", produto.Marca);
+            cmd.Parameters.AddWithValue("quant", produto.Quant);
+            cmd.Parameters.AddWithValue("valorCompra", produto.ValorCompra);
+            cmd.Parameters.AddWithValue("valorVenda", produto.ValorVenda);
+
+            try
+            {
+                conexao.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (MySqlException erro)
+            {
+                mensagem = "MySql Error: " + erro.Message;
+                return false;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
+
+
+        }
 
 
     }
