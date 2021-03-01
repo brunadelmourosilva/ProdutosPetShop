@@ -11,7 +11,7 @@ namespace ProdutosPetShop
 {
     class ConectaBanco
     {
-        MySqlConnection conexao = new MySqlConnection("server=localhost;user id=root;password=vitoria1;database=prod_petshop");
+        MySqlConnection conexao = new MySqlConnection("server=localhost;user id=root;password=;database=prod_petshop");
         public string mensagem;
         /*---------------------------------------------------------------*/
         public DataTable listaProdutos()
@@ -52,6 +52,7 @@ namespace ProdutosPetShop
             cmd.Parameters.AddWithValue("quant", produto.Quant);
             cmd.Parameters.AddWithValue("valorCompra", produto.ValorCompra);
             cmd.Parameters.AddWithValue("valorVenda", produto.ValorVenda);
+            
 
             try
             {
@@ -71,6 +72,61 @@ namespace ProdutosPetShop
 
 
 
+        }
+	/*---------------------------------------------------------------*/
+        public  bool deletaProduto(int id)
+        {
+            MySqlCommand cmd = new MySqlCommand("deletaProduto", conexao);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("id",id);
+
+            try{
+                conexao.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch(MySqlException erro)
+            {
+                mensagem = "Erro SQL: " + erro;
+                return false;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            
+        }
+	/*---------------------------------------------------------------*/
+        public bool alteraProduto(Produto p, int globalId)
+        {
+            MySqlCommand cmd = new MySqlCommand("alteraProduto",conexao);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("nome",p.Nome);
+            cmd.Parameters.AddWithValue("descricao", p.Descricao);
+            cmd.Parameters.AddWithValue("marca", p.Marca);
+            cmd.Parameters.AddWithValue("quantidade", p.Quant);
+            cmd.Parameters.AddWithValue("valorCompra", p.ValorCompra);
+            cmd.Parameters.AddWithValue("valorUnitario", p.ValorVenda);
+            cmd.Parameters.AddWithValue("idAltera", globalId);
+
+
+            try
+            {
+                conexao.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch(MySqlException erro)
+            {
+                mensagem = "Erro MySQL: " + erro;
+                return false;
+            }
+            finally
+            {
+                conexao.Close();
+            }
         }
 
 

@@ -10,13 +10,13 @@ namespace ProdutosPetShop
     {
         string nome, descricao, marca;
         int quant;
-        float valorCompra, valorVenda;
+        double valorCompra, valorVenda;
 
         public string Nome { get => nome; set => nome = value; }
         public string Descricao { get => descricao; set => descricao = value; }
         public string Marca { get => marca; set => marca = value; }
         public int Quant { get => quant; set => quant = value; }
-        public float ValorCompra { get => valorCompra; set => valorCompra = value; }
-        public float ValorVenda { get => valorVenda; set => valorVenda = value; }
+        public double ValorCompra { get => valorCompra; set => valorCompra = value; }
+        public double ValorVenda { get => valorVenda; set => valorVenda = value; }
     }
 }

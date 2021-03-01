@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sistema));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.marcadorLateral = new System.Windows.Forms.Panel();
             this.btnAlterar = new System.Windows.Forms.Button();
+            this.marcadorLateral = new System.Windows.Forms.Panel();
             this.btnBusca = new System.Windows.Forms.Button();
             this.btnCadastra = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -55,6 +55,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabBuscar = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.dgProdutos = new System.Windows.Forms.DataGridView();
             this.btnConfirmaRemocao = new System.Windows.Forms.Button();
             this.txtNomeBusca = new System.Windows.Forms.TextBox();
@@ -87,8 +88,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.marcadorLateral);
             this.panel1.Controls.Add(this.btnAlterar);
+            this.panel1.Controls.Add(this.marcadorLateral);
             this.panel1.Controls.Add(this.btnBusca);
             this.panel1.Controls.Add(this.btnCadastra);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -98,6 +99,25 @@
             this.panel1.Size = new System.Drawing.Size(183, 568);
             this.panel1.TabIndex = 0;
             // 
+            // btnAlterar
+            // 
+            this.btnAlterar.FlatAppearance.BorderSize = 0;
+            this.btnAlterar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAlterar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.ForeColor = System.Drawing.Color.White;
+            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
+            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterar.Location = new System.Drawing.Point(12, 200);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(171, 54);
+            this.btnAlterar.TabIndex = 5;
+            this.btnAlterar.Text = "      Alterar";
+            this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // marcadorLateral
             // 
             this.marcadorLateral.BackColor = System.Drawing.Color.Goldenrod;
@@ -106,33 +126,17 @@
             this.marcadorLateral.Size = new System.Drawing.Size(10, 50);
             this.marcadorLateral.TabIndex = 3;
             // 
-            // btnAlterar
-            // 
-            this.btnAlterar.FlatAppearance.BorderSize = 0;
-            this.btnAlterar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAlterar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
-            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterar.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnAlterar.Location = new System.Drawing.Point(59, 219);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(84, 58);
-            this.btnAlterar.TabIndex = 3;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
-            // 
             // btnBusca
             // 
             this.btnBusca.FlatAppearance.BorderSize = 0;
             this.btnBusca.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnBusca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
             this.btnBusca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBusca.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBusca.ForeColor = System.Drawing.Color.White;
             this.btnBusca.Image = ((System.Drawing.Image)(resources.GetObject("btnBusca.Image")));
             this.btnBusca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBusca.Location = new System.Drawing.Point(12, 151);
+            this.btnBusca.Location = new System.Drawing.Point(12, 140);
             this.btnBusca.Name = "btnBusca";
             this.btnBusca.Size = new System.Drawing.Size(171, 54);
             this.btnBusca.TabIndex = 4;
@@ -147,11 +151,11 @@
             this.btnCadastra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnCadastra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
             this.btnCadastra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastra.Font = new System.Drawing.Font("Candara Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastra.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastra.ForeColor = System.Drawing.Color.White;
             this.btnCadastra.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastra.Image")));
             this.btnCadastra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastra.Location = new System.Drawing.Point(12, 77);
+            this.btnCadastra.Location = new System.Drawing.Point(12, 80);
             this.btnCadastra.Name = "btnCadastra";
             this.btnCadastra.Size = new System.Drawing.Size(171, 54);
             this.btnCadastra.TabIndex = 3;
@@ -223,7 +227,7 @@
             this.tabControl1.Controls.Add(this.tabCadastrar);
             this.tabControl1.Controls.Add(this.tabBuscar);
             this.tabControl1.Controls.Add(this.tabAlterar);
-            this.tabControl1.Font = new System.Drawing.Font("Candara Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(183, 126);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -246,24 +250,25 @@
             this.tabCadastrar.Controls.Add(this.label4);
             this.tabCadastrar.Controls.Add(this.label3);
             this.tabCadastrar.Controls.Add(this.label2);
-            this.tabCadastrar.Location = new System.Drawing.Point(4, 28);
+            this.tabCadastrar.Location = new System.Drawing.Point(4, 29);
             this.tabCadastrar.Name = "tabCadastrar";
             this.tabCadastrar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCadastrar.Size = new System.Drawing.Size(670, 398);
+            this.tabCadastrar.Size = new System.Drawing.Size(670, 397);
             this.tabCadastrar.TabIndex = 0;
             this.tabCadastrar.Text = "Cadastrar";
             // 
             // btnConfirmaCadastro
             // 
-            this.btnConfirmaCadastro.FlatAppearance.BorderSize = 0;
             this.btnConfirmaCadastro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnConfirmaCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
             this.btnConfirmaCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmaCadastro.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmaCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmaCadastro.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnConfirmaCadastro.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirmaCadastro.Image")));
             this.btnConfirmaCadastro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfirmaCadastro.Location = new System.Drawing.Point(258, 324);
             this.btnConfirmaCadastro.Name = "btnConfirmaCadastro";
+            this.btnConfirmaCadastro.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnConfirmaCadastro.Size = new System.Drawing.Size(130, 40);
             this.btnConfirmaCadastro.TabIndex = 12;
             this.btnConfirmaCadastro.Text = " Salvar";
@@ -275,42 +280,42 @@
             // 
             this.txtValorUni.Location = new System.Drawing.Point(164, 273);
             this.txtValorUni.Name = "txtValorUni";
-            this.txtValorUni.Size = new System.Drawing.Size(162, 27);
+            this.txtValorUni.Size = new System.Drawing.Size(162, 26);
             this.txtValorUni.TabIndex = 11;
             // 
             // txtValorCompra
             // 
             this.txtValorCompra.Location = new System.Drawing.Point(164, 221);
             this.txtValorCompra.Name = "txtValorCompra";
-            this.txtValorCompra.Size = new System.Drawing.Size(162, 27);
+            this.txtValorCompra.Size = new System.Drawing.Size(162, 26);
             this.txtValorCompra.TabIndex = 10;
             // 
             // txtQtd
             // 
             this.txtQtd.Location = new System.Drawing.Point(164, 171);
             this.txtQtd.Name = "txtQtd";
-            this.txtQtd.Size = new System.Drawing.Size(162, 27);
+            this.txtQtd.Size = new System.Drawing.Size(162, 26);
             this.txtQtd.TabIndex = 9;
             // 
             // txtMarca
             // 
             this.txtMarca.Location = new System.Drawing.Point(164, 127);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(498, 27);
+            this.txtMarca.Size = new System.Drawing.Size(498, 26);
             this.txtMarca.TabIndex = 8;
             // 
             // txtDescricao
             // 
             this.txtDescricao.Location = new System.Drawing.Point(164, 70);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(498, 27);
+            this.txtDescricao.Size = new System.Drawing.Size(498, 26);
             this.txtDescricao.TabIndex = 7;
             // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(164, 20);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(498, 27);
+            this.txtNome.Size = new System.Drawing.Size(498, 26);
             this.txtNome.TabIndex = 6;
             // 
             // label7
@@ -318,7 +323,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(10, 273);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 19);
+            this.label7.Size = new System.Drawing.Size(106, 20);
             this.label7.TabIndex = 5;
             this.label7.Text = "Valor unitário:";
             // 
@@ -327,7 +332,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(6, 224);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(156, 19);
+            this.label6.Size = new System.Drawing.Size(164, 20);
             this.label6.TabIndex = 4;
             this.label6.Text = "Valor total da compra:";
             // 
@@ -336,7 +341,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(2, 174);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 19);
+            this.label5.Size = new System.Drawing.Size(96, 20);
             this.label5.TabIndex = 3;
             this.label5.Text = "Quantidade:";
             // 
@@ -345,7 +350,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 127);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 19);
+            this.label4.Size = new System.Drawing.Size(57, 20);
             this.label4.TabIndex = 2;
             this.label4.Text = "Marca:";
             // 
@@ -354,7 +359,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 19);
+            this.label3.Size = new System.Drawing.Size(84, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Descrição:";
             // 
@@ -363,23 +368,39 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 19);
+            this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Nome:";
             // 
             // tabBuscar
             // 
             this.tabBuscar.BackColor = System.Drawing.SystemColors.Control;
+            this.tabBuscar.Controls.Add(this.button1);
             this.tabBuscar.Controls.Add(this.dgProdutos);
             this.tabBuscar.Controls.Add(this.btnConfirmaRemocao);
             this.tabBuscar.Controls.Add(this.txtNomeBusca);
             this.tabBuscar.Controls.Add(this.label8);
-            this.tabBuscar.Location = new System.Drawing.Point(4, 28);
+            this.tabBuscar.Location = new System.Drawing.Point(4, 29);
             this.tabBuscar.Name = "tabBuscar";
             this.tabBuscar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBuscar.Size = new System.Drawing.Size(670, 398);
+            this.tabBuscar.Size = new System.Drawing.Size(670, 397);
             this.tabBuscar.TabIndex = 1;
             this.tabBuscar.Text = "Buscar";
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button1.Location = new System.Drawing.Point(580, 144);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(84, 58);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Alterar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // dgProdutos
             // 
@@ -393,7 +414,6 @@
             // 
             // btnConfirmaRemocao
             // 
-            this.btnConfirmaRemocao.FlatAppearance.BorderSize = 0;
             this.btnConfirmaRemocao.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnConfirmaRemocao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
             this.btnConfirmaRemocao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -411,15 +431,16 @@
             // 
             this.txtNomeBusca.Location = new System.Drawing.Point(77, 13);
             this.txtNomeBusca.Name = "txtNomeBusca";
-            this.txtNomeBusca.Size = new System.Drawing.Size(587, 27);
+            this.txtNomeBusca.Size = new System.Drawing.Size(587, 26);
             this.txtNomeBusca.TabIndex = 1;
+            this.txtNomeBusca.TextChanged += new System.EventHandler(this.txtNomeBusca_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(7, 17);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 19);
+            this.label8.Size = new System.Drawing.Size(55, 20);
             this.label8.TabIndex = 0;
             this.label8.Text = "Nome:";
             // 
@@ -439,22 +460,22 @@
             this.tabAlterar.Controls.Add(this.label12);
             this.tabAlterar.Controls.Add(this.label13);
             this.tabAlterar.Controls.Add(this.label14);
-            this.tabAlterar.Location = new System.Drawing.Point(4, 28);
+            this.tabAlterar.Location = new System.Drawing.Point(4, 29);
             this.tabAlterar.Name = "tabAlterar";
             this.tabAlterar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAlterar.Size = new System.Drawing.Size(670, 398);
+            this.tabAlterar.Size = new System.Drawing.Size(670, 397);
             this.tabAlterar.TabIndex = 2;
             this.tabAlterar.Text = "Alterar";
             // 
             // btnConfirmaAlteracao
             // 
-            this.btnConfirmaAlteracao.FlatAppearance.BorderSize = 0;
             this.btnConfirmaAlteracao.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnConfirmaAlteracao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
             this.btnConfirmaAlteracao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmaAlteracao.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmaAlteracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmaAlteracao.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnConfirmaAlteracao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfirmaAlteracao.Location = new System.Drawing.Point(258, 324);
+            this.btnConfirmaAlteracao.Location = new System.Drawing.Point(258, 323);
             this.btnConfirmaAlteracao.Name = "btnConfirmaAlteracao";
             this.btnConfirmaAlteracao.Size = new System.Drawing.Size(130, 40);
             this.btnConfirmaAlteracao.TabIndex = 18;
@@ -465,97 +486,97 @@
             // 
             // txtAlteraValorUni
             // 
-            this.txtAlteraValorUni.Location = new System.Drawing.Point(166, 285);
+            this.txtAlteraValorUni.Location = new System.Drawing.Point(164, 273);
             this.txtAlteraValorUni.Name = "txtAlteraValorUni";
-            this.txtAlteraValorUni.Size = new System.Drawing.Size(162, 27);
+            this.txtAlteraValorUni.Size = new System.Drawing.Size(162, 26);
             this.txtAlteraValorUni.TabIndex = 17;
             // 
             // txtAlteraValorCompra
             // 
-            this.txtAlteraValorCompra.Location = new System.Drawing.Point(166, 233);
+            this.txtAlteraValorCompra.Location = new System.Drawing.Point(164, 221);
             this.txtAlteraValorCompra.Name = "txtAlteraValorCompra";
-            this.txtAlteraValorCompra.Size = new System.Drawing.Size(162, 27);
+            this.txtAlteraValorCompra.Size = new System.Drawing.Size(162, 26);
             this.txtAlteraValorCompra.TabIndex = 16;
             // 
             // txtAlteraQtd
             // 
-            this.txtAlteraQtd.Location = new System.Drawing.Point(166, 183);
+            this.txtAlteraQtd.Location = new System.Drawing.Point(164, 171);
             this.txtAlteraQtd.Name = "txtAlteraQtd";
-            this.txtAlteraQtd.Size = new System.Drawing.Size(162, 27);
+            this.txtAlteraQtd.Size = new System.Drawing.Size(162, 26);
             this.txtAlteraQtd.TabIndex = 15;
             // 
             // txtAlteraMarca
             // 
-            this.txtAlteraMarca.Location = new System.Drawing.Point(166, 139);
+            this.txtAlteraMarca.Location = new System.Drawing.Point(164, 127);
             this.txtAlteraMarca.Name = "txtAlteraMarca";
-            this.txtAlteraMarca.Size = new System.Drawing.Size(498, 27);
+            this.txtAlteraMarca.Size = new System.Drawing.Size(498, 26);
             this.txtAlteraMarca.TabIndex = 14;
             // 
             // txtAlteraDescricao
             // 
-            this.txtAlteraDescricao.Location = new System.Drawing.Point(166, 82);
+            this.txtAlteraDescricao.Location = new System.Drawing.Point(164, 70);
             this.txtAlteraDescricao.Name = "txtAlteraDescricao";
-            this.txtAlteraDescricao.Size = new System.Drawing.Size(498, 27);
+            this.txtAlteraDescricao.Size = new System.Drawing.Size(498, 26);
             this.txtAlteraDescricao.TabIndex = 13;
             // 
             // txtAlteraNome
             // 
-            this.txtAlteraNome.Location = new System.Drawing.Point(166, 32);
+            this.txtAlteraNome.Location = new System.Drawing.Point(164, 20);
             this.txtAlteraNome.Name = "txtAlteraNome";
-            this.txtAlteraNome.Size = new System.Drawing.Size(498, 27);
+            this.txtAlteraNome.Size = new System.Drawing.Size(498, 26);
             this.txtAlteraNome.TabIndex = 12;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 285);
+            this.label9.Location = new System.Drawing.Point(10, 273);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 19);
+            this.label9.Size = new System.Drawing.Size(106, 20);
             this.label9.TabIndex = 11;
             this.label9.Text = "Valor unitário:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 236);
+            this.label10.Location = new System.Drawing.Point(6, 224);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(156, 19);
+            this.label10.Size = new System.Drawing.Size(164, 20);
             this.label10.TabIndex = 10;
             this.label10.Text = "Valor total da compra:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(2, 186);
+            this.label11.Location = new System.Drawing.Point(2, 174);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(93, 19);
+            this.label11.Size = new System.Drawing.Size(96, 20);
             this.label11.TabIndex = 9;
             this.label11.Text = "Quantidade:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 139);
+            this.label12.Location = new System.Drawing.Point(6, 127);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 19);
+            this.label12.Size = new System.Drawing.Size(57, 20);
             this.label12.TabIndex = 8;
             this.label12.Text = "Marca:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 82);
+            this.label13.Location = new System.Drawing.Point(6, 70);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(77, 19);
+            this.label13.Size = new System.Drawing.Size(84, 20);
             this.label13.TabIndex = 7;
             this.label13.Text = "Descrição:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 32);
+            this.label14.Location = new System.Drawing.Point(6, 20);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(54, 19);
+            this.label14.Size = new System.Drawing.Size(55, 20);
             this.label14.TabIndex = 6;
             this.label14.Text = "Nome:";
             // 
@@ -621,7 +642,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnConfirmaCadastro;
         private System.Windows.Forms.DataGridView dgProdutos;
-        private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnConfirmaAlteracao;
         private System.Windows.Forms.TextBox txtAlteraValorUni;
         private System.Windows.Forms.TextBox txtAlteraValorCompra;
@@ -637,6 +657,8 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button button1;
     }
 }
 
