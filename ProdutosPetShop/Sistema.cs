@@ -71,7 +71,11 @@ namespace ProdutosPetShop
             produto.Nome = txtNome.Text;
             produto.Descricao = txtDescricao.Text;
             produto.Marca = txtMarca.Text;
-            produto.Quant = Convert.ToInt32(txtQtd.Text);
+
+            int quantidade;
+            int.TryParse(txtQtd.Text, out quantidade);
+            produto.Quant = quantidade;
+            
             produto.ValorCompra = Convert.ToSingle(txtValorCompra.Text);
             produto.ValorVenda = Convert.ToSingle(txtValorUni.Text);
 
